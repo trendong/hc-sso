@@ -9,6 +9,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>hc-sso-core</module>
+        <module>hc-sso-server</module>
     </modules>
     <packaging>pom</packaging>
 
