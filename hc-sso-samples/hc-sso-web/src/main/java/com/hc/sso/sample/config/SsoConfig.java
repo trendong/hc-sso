@@ -1,7 +1,7 @@
 package com.hc.sso.sample.config;
 
 import com.hc.sso.core.conf.Conf;
-import com.hc.sso.core.filter.TokenFilter;
+import com.hc.sso.core.filter.WebFilter;
 import com.hc.sso.core.util.JedisUtil;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.annotation.Value;
@@ -38,10 +38,10 @@ public class SsoConfig implements DisposableBean {
         // hc-sso, filter init
         FilterRegistrationBean registration = new FilterRegistrationBean();
 
-        registration.setName("TokenFilter");
+        registration.setName("WebFilter");
         registration.setOrder(1);
         registration.addUrlPatterns("/*");
-        registration.setFilter(new TokenFilter());
+        registration.setFilter(new WebFilter());
         registration.addInitParameter(Conf.SSO_SERVER, hcSsoServer);
         registration.addInitParameter(Conf.SSO_LOGOUT_PATH, hcSsoLogoutPath);
         registration.addInitParameter(Conf.SSO_EXCLUDED_PATHS, hcSsoExcludedPaths);

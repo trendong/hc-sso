@@ -2,7 +2,7 @@
 <configuration debug="false" scan="true" scanPeriod="1 seconds">
 
     <contextName>logback</contextName>
-    <property name="log.path" value="/Users/donghuajie/IdeaProjects/A-learn/hc-sso/hc-sso-server/hc-sso-server.log"/>
+    <property name="log.path" value="/Users/donghuajie/IdeaProjects/A-learn/hc-sso/hc-sso-samples/hc-sso-web/hc-sso-web.log"/>
 
     <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
        <!-- <filter class="ch.qos.logback.classic.filter.ThresholdFilter" >

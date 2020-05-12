@@ -4,6 +4,7 @@ import com.hc.sso.core.conf.Conf;
 import com.hc.sso.core.entity.ReturnT;
 import com.hc.sso.core.user.SsoUser;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -16,10 +17,19 @@ import javax.servlet.http.HttpServletRequest;
  */
 @Controller
 public class IndexController {
+
     @RequestMapping("/")
-    @ResponseBody
-    public ReturnT<SsoUser> index(HttpServletRequest request) {
+    public String index(Model model, HttpServletRequest request) {
         SsoUser ssoUser = (SsoUser) request.getAttribute(Conf.SSO_USER);
-        return new ReturnT<SsoUser>(ssoUser);
+        model.addAttribute("user", ssoUser);
+        return "index";
     }
+
+    @RequestMapping("/json")
+    @ResponseBody
+    public ReturnT<SsoUser> json(HttpServletRequest request) {
+        SsoUser ssoUser = (SsoUser) request.getAttribute(Conf.SSO_USER);
+        return new ReturnT(ssoUser);
+    }
+
 }

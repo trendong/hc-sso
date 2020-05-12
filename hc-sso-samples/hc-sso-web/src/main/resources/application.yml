@@ -1,0 +1,35 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /hc-sso-web
+
+### resources
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 1
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+### freemarker
+  freemarker:
+    templateLoaderPath: classpath:/templates/
+    suffix: .ftl
+    charset: UTF-8
+    request-context-attribute: request
+    settings:
+      number_format: 0.##########
+
+### hc-sso
+hc:
+  sso:
+    server: http://hcssoserver.com:8080/hc-sso-server
+    logout:
+      path: /logout
+    excluded:
+      paths:
+### hc-sso-redis
+    redis:
+      address: redis://127.0.0.1:6379
+      expire:
+        minute: 1440
