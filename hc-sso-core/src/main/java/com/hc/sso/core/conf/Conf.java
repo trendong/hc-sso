@@ -21,7 +21,7 @@ public class Conf {
     /**
      * sso user, request attribute (web client)
      */
-    public static final String SSO_USER = "xxl_sso_user";
+    public static final String SSO_USER = "hc_sso_user";
 
     /**
      * sso server address (web + token client)

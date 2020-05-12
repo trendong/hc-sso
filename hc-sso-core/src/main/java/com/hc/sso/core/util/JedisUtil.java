@@ -382,7 +382,6 @@ public class JedisUtil {
         String ssoRedisAddress = "redis://hc-sso:password@127.0.0.1:6379/0";
         ssoRedisAddress = "redis://127.0.0.1:6379/0";
         init(ssoRedisAddress);
-
         setObjectValue("key", "666", 2*60*60);
         System.out.println(getObjectValue("key"));
 

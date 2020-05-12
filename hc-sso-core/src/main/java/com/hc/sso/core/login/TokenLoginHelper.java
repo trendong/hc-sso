@@ -18,16 +18,16 @@ public class TokenLoginHelper {
      * client login
      *
      * @param sessionId
-     * @param xxlUser
+     * @param ssoUser
      */
-    public static void login(String sessionId, SsoUser xxlUser) {
+    public static void login(String sessionId, SsoUser ssoUser) {
 
         String storeKey = SsoSessionIdHelper.parseStoreKey(sessionId);
         if (storeKey == null) {
             throw new RuntimeException("parseStoreKey Fail, sessionId:" + sessionId);
         }
 
-        SsoLoginStore.put(storeKey, xxlUser);
+        SsoLoginStore.put(storeKey, ssoUser);
     }
 
     /**
@@ -68,18 +68,18 @@ public class TokenLoginHelper {
             return null;
         }
 
-        SsoUser xxlUser = SsoLoginStore.get(storeKey);
-        if (xxlUser != null) {
+        SsoUser ssoUser = SsoLoginStore.get(storeKey);
+        if (ssoUser != null) {
             String version = SsoSessionIdHelper.parseVersion(sessionId);
-            if (xxlUser.getVersion().equals(version)) {
+            if (ssoUser.getVersion().equals(version)) {
 
                 // After the expiration time has passed half, Auto refresh
-                if ((System.currentTimeMillis() - xxlUser.getExpireFreshTime()) > xxlUser.getExpireMinite()/2) {
-                    xxlUser.setExpireFreshTime(System.currentTimeMillis());
-                    SsoLoginStore.put(storeKey, xxlUser);
+                if ((System.currentTimeMillis() - ssoUser.getExpireFreshTime()) > ssoUser.getExpireMinute()/2) {
+                    ssoUser.setExpireFreshTime(System.currentTimeMillis());
+                    SsoLoginStore.put(storeKey, ssoUser);
                 }
 
-                return xxlUser;
+                return ssoUser;
             }
         }
         return null;

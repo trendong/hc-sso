@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /hc-sso-server
+
+### resources
+spring:
+  mvc:
+    servlet:
+      load-on-startup: 0
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+
+### freemarker
+  freemarker:
+    templateLoaderPath: classpath:/templates/
+    suffix: .ftl
+    charset: UTF-8
+    request-context-attribute: request
+    settings:
+      number_format: 0.##########
+
+### hc-sso
+hc:
+  sso:
+    redis:
+      address: redis://127.0.0.1:6379
+      expire:
+        minute: 1440

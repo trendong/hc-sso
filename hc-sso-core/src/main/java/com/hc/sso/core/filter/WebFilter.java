@@ -35,7 +35,7 @@ public class WebFilter extends HttpServlet implements Filter {
         logoutPath = filterConfig.getInitParameter(Conf.SSO_LOGOUT_PATH);
         excludedPaths = filterConfig.getInitParameter(Conf.SSO_EXCLUDED_PATHS);
 
-        logger.info("XxlSsoWebFilter init.");
+        logger.info("SsoWebFilter init.");
 
     }
 
