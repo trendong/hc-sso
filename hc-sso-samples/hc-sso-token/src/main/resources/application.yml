@@ -1,0 +1,19 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /hc-sso-token
+
+### hc-sso
+hc:
+  sso:
+    server: http://hcssoserver.com:8080/hc-sso-server
+    logout:
+      path: /logout
+    excluded:
+      paths:
+### hc-sso-redis
+    redis:
+      address: redis://127.0.0.1:6379
+      expire:
+        minute: 1440
+
