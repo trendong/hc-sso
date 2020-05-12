@@ -1,7 +1,7 @@
 # Introduction
 HC-SSO 是一个分布式单点登录框架。只需要登录一次就可以访问所有相互信任的应用系统。
 拥有"轻量级、分布式、跨域、Cookie+Token均支持、Web+APP均支持"等特性。现已开放源代码，开箱即用。
-ps: 项目代码起始借鉴自XXL开源社区（XXL-SSO）：https://www.xuxueli.com/，大家可以关注下！
+ps: 项目代码起始借鉴自XXL开源社区（XXL-SSO）：[https://www.xuxueli.com/]，大家可以关注下！
 并且我会在此基础上持续更新。
 
 ## Features
@@ -28,6 +28,6 @@ ps: 项目代码起始借鉴自XXL开源社区（XXL-SSO）：https://www.xuxuel
 7. 安全性增强，登陆用户数据中，新增客户端信息如ip、ua等，方式session被窃取；
 
 ## Donate
-无论金额多少都足够表达您这份心意，非常感谢 ：） [前往捐赠](https://www.xuxueli.com/page/donate.html )
+无论金额多少都足够表达您这份心意，非常感谢 ：） [前往捐赠](https://www.xuxueli.com/page/donate.html)
 （本人为表心意，金额虽小但已赞助此社区，希望能涌现出更多更好的作品！）
 最后注意!!!捐赠链接不是我这，是XXL开源社区
