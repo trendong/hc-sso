@@ -19,13 +19,13 @@ ps: 项目代码起始借鉴自XXL开源社区（XXL-SSO）：https://www.xuxuel
 12. 路径排除：支持自定义多个排除路径，支持Ant表达式。用于排除SSO客户端不需要过滤的路径
 
 ## TODO LIST
-1、认证中心与接入端交互数据加密，增强安全性；redirect_url必须和临时AccessToken配合才会生效，AccessToken有效期60s，阅后即焚模式；
-2、SSO SessionId 与IP绑定，增强用户增强安全性
-3、支持认证分组，分组内共享登陆状态，分组之间登录态隔离，【待考虑】
-4、客户端新增属性 “xxl.sso.server”，用于构建跳转连接，防止跳转第三方导致登陆漏洞
-5、token验证方式增加jwt方式支持
-6、Client端移除Redis依赖，改为 LocalCache/30s + RPC + Server-Redis/Broadcast 校验方式；
-7、安全性增强，登陆用户数据中，新增客户端信息如ip、ua等，方式session被窃取；
+1. 认证中心与接入端交互数据加密，增强安全性；redirect_url必须和临时AccessToken配合才会生效，AccessToken有效期60s，阅后即焚模式；
+2. SSO SessionId 与IP绑定，增强用户增强安全性；
+3. 支持认证分组，分组内共享登陆状态，分组之间登录态隔离，【待考虑】；
+4. 客户端新增属性 “xxl.sso.server”，用于构建跳转连接，防止跳转第三方导致登陆漏洞；
+5. token验证方式增加jwt方式支持；
+6. Client端移除Redis依赖，改为 LocalCache/30s + RPC + Server-Redis/Broadcast 校验方式；
+7. 安全性增强，登陆用户数据中，新增客户端信息如ip、ua等，方式session被窃取；
 
 ## Donate
 无论金额多少都足够表达您这份心意，非常感谢 ：） [前往捐赠](https://www.xuxueli.com/page/donate.html )
