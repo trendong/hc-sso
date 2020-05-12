@@ -10,6 +10,7 @@
     <modules>
         <module>hc-sso-core</module>
         <module>hc-sso-server</module>
+        <module>hc-sso-samples</module>
     </modules>
     <packaging>pom</packaging>
 
